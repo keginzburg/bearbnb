@@ -1,1 +1,46 @@
 /* TODO Add site wide styles */
+
+body {
+    font-family: 'Manrope', sans-serif;
+}
+
+.font-st {
+    font-size: 14px;
+    font-weight: 800;
+    color: #222222;
+}
+
+.font-st2 {
+    font-size: 12px;
+}
+
+.font-var {
+    font-weight: 300;
+    color: #717171;
+}
+
+.font-var2 {
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+.l-h1 {
+    font-size: 15px;
+}
+
+.l-h2 {
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.l-h3 {
+    font-size: 15px;
+    font-weight: 300;
+    color: #717171;
+}
+
+.l-h4 {
+    font-size: 15px;
+    font-weight: 300;
+    color: #717171;
+}

@@ -1,6 +1,16 @@
+import { Switch, Route } from 'react-router-dom';
+
+import Feed from "./components/Feed";
+
 function App() {
   return (
-    <h1>Hello from App</h1>
+    <>
+      <Switch>
+        <Route path="/">
+          <Feed />
+        </Route>
+      </Switch>
+    </>
   );
 }
 

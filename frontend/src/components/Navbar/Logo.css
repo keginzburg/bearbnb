@@ -1,0 +1,23 @@
+.logo-box {
+    display: flex;
+    align-items: center;
+    margin-left: 5vw;
+    margin-right: 12vw;
+}
+
+.logo-box:hover {
+    cursor: pointer;
+}
+
+.small-logo {
+    color: rgb(255, 56, 92);
+    font-size: 38px;
+    margin-right: 5px;
+}
+
+.text-logo {
+    font-family: 'Manrope', sans-serif;
+    color: rgb(255, 56, 92);
+    font-size: 22px;
+    width: fit-content;
+}

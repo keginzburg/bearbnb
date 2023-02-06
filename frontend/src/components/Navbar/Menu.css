@@ -1,0 +1,39 @@
+.menu-box {
+    margin-right: 5vw;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.host-box button {
+    width: fit-content;
+    height: fit-content;
+    padding: 14px;
+    background-color: transparent;
+    border: none;
+    border-radius: 30px;
+    font-size: 15px;
+}
+
+.host-box button:hover {
+    background-color: rgba(211,211,211,0.25);
+    cursor: pointer;
+}
+
+.per-link-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: gray;
+    font-size: 26px;
+    border-radius: 30px;
+    margin-left: 10px;
+}
+
+.per-link-box:hover {
+    background-color: rgba(211,211,211,0.35);
+    cursor: pointer;
+}
