@@ -20,8 +20,8 @@ const csrfFetch = async (url, options = {}) => {
 
     const response = await fetch(url, options);
 
-    if (response.state >= 400) throw response;
-
+    if (response.status >= 400) throw response;
+    
     return response;
 };
 

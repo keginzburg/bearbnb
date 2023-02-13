@@ -2,7 +2,6 @@ class Api::UsersController < ApplicationController
   wrap_parameters include: User.attribute_names + ['password', 'fname', 'lname']
 
   def find
-    debugger
     @user = User.find_by(email: params[:email])
 
     if @user
@@ -13,9 +12,8 @@ class Api::UsersController < ApplicationController
   end
 
   def create
-    debugger
     @user = User.new(user_params)
-    debugger
+    
     if @user.save
       login!(@user)
       render 'api/users/show'

@@ -24,3 +24,5 @@
 
 # Ignore your byebug history
 .byebug_history
+
+/public

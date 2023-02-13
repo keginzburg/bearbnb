@@ -8,10 +8,21 @@
 #  session_token   :string           not null
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
+#  f_name          :string           not null
+#  l_name          :string           not null
 #
 class User < ApplicationRecord
   has_secure_password
 
+  has_many :listings,
+    primary_key: :id,
+    foreign_key: :host_id,
+    class_name: :Listing
+
+  validates :f_name,
+    presence: true
+  validates :l_name,
+    presence: true
   validates :email,
     uniqueness: true,
     length: { in: 3..255 },

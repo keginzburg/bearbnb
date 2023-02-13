@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import SessionLinks from "./SessionLinks";
 
@@ -7,8 +7,23 @@ import "./ProfileButton.css";
 const ProfileButton = () => {
     const [showMenu, setShowMenu] = useState(false);
 
+    const openMenu = () => {
+        if (showMenu) return;
+        setShowMenu(true);
+    }
+
+    useEffect(() => {
+        const closeMenu = () => {
+            setShowMenu(false);
+        }
+        if (showMenu) {
+            document.addEventListener('click', closeMenu);
+            return () => document.removeEventListener('click', closeMenu);
+        }
+    }, [showMenu])
+
     return (
-        <div className="profile-button-box" onClick={e => setShowMenu(prevState => !prevState)}>
+        <div className="profile-button-box" onClick={openMenu}>
             <div className="hamburger-icon">
                 <i className="fa-sharp fa-solid fa-bars"></i>
             </div>
@@ -21,9 +36,9 @@ const ProfileButton = () => {
                         <SessionLinks />
                     </div>
                     <div className="addl-links">
-                        <a className="l-h4" href="http://github.com/keginzburg">My GitHub</a>
-                        <a className="l-h4" href="https://www.linkedin.com/in/kyleginzburg">My LinkedIn</a>
-                        <a className="l-h4" href="https://angel.co/u/kyle-ginzburg">My AngelList</a>
+                        <a className="l-h4 personal" href="http://github.com/keginzburg">My GitHub</a>
+                        <a className="l-h4 personal" href="https://www.linkedin.com/in/kyleginzburg">My LinkedIn</a>
+                        <a className="l-h4 personal" href="https://angel.co/u/kyle-ginzburg">My AngelList</a>
                     </div> 
                 </div>
             )}

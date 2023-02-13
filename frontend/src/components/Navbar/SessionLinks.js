@@ -1,26 +1,29 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 
-import { logout } from '../../store/session';
+import * as sessionActions from '../../store/session';
 
 const SessionLinks = () => {
     const dispatch = useDispatch();
     const sessionUser = useSelector(state => state.session.user);
 
-    const handleLogout = async e => {
+    const handleLogout = e => {
         e.preventDefault();
-        const response = await dispatch(logout());
+        dispatch(sessionActions.logout());
     }
 
     if (sessionUser) {
         return (
-            <button className='l-h4' onClick={handleLogout}>Log out</button>
+            <>
+                <span className='l-h5 session welcome'>Welcome {sessionUser.fName + " " + sessionUser.lName}!</span> 
+                <button className='l-h4 session' onClick={handleLogout}>Log out</button>
+            </>
         );
     } else {
         return (
             <>
-                <NavLink to="/auth" className="l-h4">Sign up</NavLink>
-                <NavLink to="/auth" className="l-h5">Log in</NavLink>
+                <NavLink to="/auth" className="l-h4 session">Sign up</NavLink>
+                <NavLink to="/auth" className="l-h4 session">Log in</NavLink>
             </>
         );
     }

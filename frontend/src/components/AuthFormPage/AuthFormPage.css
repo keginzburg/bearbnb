@@ -1,0 +1,180 @@
+.auth-form-modal-bg {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(113, 113, 113, 0.7);
+    z-index: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.auth-form-modal, .login-form-modal {
+    background-color: white;
+    border-radius: 10px;
+    min-width: 550px;
+    width: 550px;
+    min-height: fit-content;
+}
+
+.auth-header {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(10,10,10,0.1);
+}
+
+.exit-icon {
+    margin: 0 15px;
+    font-size: 18px;
+    padding: 3px 10px;
+    border-radius: 50%;
+}
+
+.exit-icon:hover {
+    background-color: rgba(211, 211, 211, 0.35);
+    cursor: pointer;
+}
+
+.auth-h1 {
+    font-size: 18px;
+    padding: 0 150px;
+}
+
+.login-h1 {
+    font-size: 18px;
+    padding: 0 180px;
+    
+}
+
+.auth-form {
+    padding: 25px 20px;
+    position: relative;
+}
+
+.auth-form h2 {
+    margin: 0;
+    font-weight: 500;
+    font-size: 22px;
+}
+
+#email, #password {
+    margin: 20px 0 8px;
+    padding: 16px 14px;
+    width: 480px;
+    border-radius: 8px;
+    border: 1px solid rgba(113, 113, 113, 0.7);
+    height: fit-content;
+    font-size: 16px;
+}
+
+.fname {
+    margin: 20px 0 0;
+    padding: 16px 14px;
+    width: 480px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border: 1px solid rgba(113, 113, 113, 0.7);
+    height: fit-content;
+    font-size: 16px;
+}
+
+.lname {
+    margin: 0 0 8px;
+    padding: 16px 14px;
+    width: 480px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border: 1px solid rgba(113, 113, 113, 0.7);
+    height: fit-content;
+    font-size: 16px;
+}
+
+#email:focus-visible, #password:focus-visible, #fname:focus-visible, #lanem:focus-visible {
+    outline: 1px solid black;
+}
+
+#email::placeholder, #password::placeholder, #fname::placeholder, #lname::placeholder {
+    font-size: 16px;
+    transition: 0.1s;
+}
+
+#email:focus::placeholder, #password:focus::placeholder, #fname:focus::placeholder, #lname:focus::placeholder {
+    font-size: 10px;
+    transform: translate(0px, -16px);
+}
+
+.email-error {
+    /* background-color: red; */
+    /* color: red; */
+    /* outline: 1px solid red; */
+    /* outline: 1px solid rgb(193, 53, 21); */
+    outline: 1px solid rgb(226, 53, 14);
+    background-color: rgba(193, 53, 21, 0.05);
+}
+
+.email-error:focus-visible {
+    /* outline: 1px solid red; */
+    outline: 1px solid rgb(226, 53, 14);
+    /* outline: 1px solid rgb(193, 53, 21); */
+    background-color: rgba(193, 53, 21, 0.05);
+
+}
+.email-error::placeholder {
+    color: rgb(226, 53, 14);
+}
+
+.auth-errors {
+    margin: 0 0 16px;
+    padding: 0;
+    color: rgb(226, 53, 14);
+    font-size: 12px;
+    list-style: none;
+}
+
+.auth-error {
+    display: flex;
+}
+
+.auth-error-message {
+    margin-left: 5px;
+}
+
+.auth-form input[type="submit"], .auth-form input[type="button"] {
+    /* margin: 20px 0; */
+    padding: 16px 0;
+    width: 510px;
+    height: fit-content;
+    border: 1px solid rgb(255, 56, 92);
+    border-radius: 8px;
+    
+    font-weight: 200;
+    letter-spacing: 1px;
+    font-size: 16px;
+    color: white;
+    background-image: linear-gradient(0.25turn, rgb(230, 30, 77), rgb(215, 23, 102));
+    
+    transition: 1s;
+}
+
+.auth-form input[type="button"] {
+    margin-top: 10px;
+}
+
+.auth-form input[type="submit"]:hover, .auth-form input[type="button"]:hover {
+    cursor: pointer;
+    /* background-image: linear-gradient(0.25turn, rgb(230, 30, 77), rgb(215, 23, 102)); */
+    filter: brightness(1.1);
+}
+
+.terms-conditions {
+    font-size: 12px;
+}
+
+.terms-conditions span {
+    font-weight: 800;
+}

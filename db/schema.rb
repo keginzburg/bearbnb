@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_06_223101) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_09_211508) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -42,6 +42,32 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_06_223101) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
+  create_table "listings", force: :cascade do |t|
+    t.string "title", null: false
+    t.text "description", null: false
+    t.float "price", null: false
+    t.float "latitude", null: false
+    t.float "longitude", null: false
+    t.string "street", null: false
+    t.string "city", null: false
+    t.string "state", null: false
+    t.string "country", null: false
+    t.string "zip_code", null: false
+    t.string "property_type", null: false
+    t.integer "number_of_guests", null: false
+    t.integer "number_of_beds", null: false
+    t.integer "number_of_baths", null: false
+    t.bigint "host_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["city"], name: "index_listings_on_city"
+    t.index ["country"], name: "index_listings_on_country"
+    t.index ["host_id"], name: "index_listings_on_host_id"
+    t.index ["number_of_guests"], name: "index_listings_on_number_of_guests"
+    t.index ["state"], name: "index_listings_on_state"
+    t.index ["zip_code"], name: "index_listings_on_zip_code"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", null: false
     t.string "password_digest", null: false
@@ -56,4 +82,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_06_223101) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "listings", "users", column: "host_id"
 end

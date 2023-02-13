@@ -81,6 +81,4 @@ test:
 #
 production:
   <<: *default
-  database: bearbnb_production
-  username: bearbnb
-  password: <%= ENV["BEARBNB_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
