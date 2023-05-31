@@ -1,6 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { NavLink } from 'react-router-dom';
-
+import { openAuthModal } from '../../store/uiReducer';
 import * as sessionActions from '../../store/session';
 
 const SessionLinks = () => {
@@ -12,6 +11,12 @@ const SessionLinks = () => {
         dispatch(sessionActions.logout());
     }
 
+    const handleAuth = e => {
+        e.preventDefault();
+        dispatch(openAuthModal());
+    }
+
+
     if (sessionUser) {
         return (
             <>
@@ -22,8 +27,8 @@ const SessionLinks = () => {
     } else {
         return (
             <>
-                <NavLink to="/auth" className="l-h4 session">Sign up</NavLink>
-                <NavLink to="/auth" className="l-h4 session">Log in</NavLink>
+                <button className="l-h4 session" onClick={handleAuth}>Sign up</button>
+                <button className="l-h4 session" onClick={handleAuth}>Log in</button>
             </>
         );
     }

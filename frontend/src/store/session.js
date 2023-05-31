@@ -1,4 +1,5 @@
 import csrfFetch from "./csrf";
+import { closeModal } from "./uiReducer";
 
 const SET_CURRENT_USER = "session/setCurrentUser";
 
@@ -23,6 +24,7 @@ export const login = user => async dispatch => {
         const data = await response.json();
         storeCurrentUser(data.user);
         dispatch(setCurrentUser(data.user));
+        dispatch(closeModal())
         return response;
     }
 }
@@ -41,6 +43,7 @@ export const signup = user => async dispatch => {
         const data = await response.json();
         storeCurrentUser(data.user);
         dispatch(setCurrentUser(data.user));
+        dispatch(closeModal())
         return response;
     }
 }

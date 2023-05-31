@@ -24,7 +24,7 @@ const ListingsIndexItem = ({listing, host}) => {
                         <h1 className="l-h1">{listing.title}</h1>
                         <h2 className="l-h2">
                             <div className="star-icon">
-                                <i class="fa-solid fa-star"></i>
+                                <i className="fa-solid fa-star"></i>
                             </div>
                             {/* {toRating(listing.rating)} */}
                             4.72

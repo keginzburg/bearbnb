@@ -11,12 +11,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 1px solid rgba(113, 113, 133, 0.25);
     height: fit-content;
     background-color: white;
+    /* transition: 0.1s; */
     /* position: relative; */
     /* position: fixed; */
     /* top: 0; */
+}
+
+.cat-idx-scroll {
+    border-bottom: 1px solid rgba(113, 113, 133, 0.25);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
 
 .cat-idx-buffer {

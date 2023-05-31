@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Redirect, useHistory } from "react-router-dom";
 import * as sessionActions from "../../store/session";
+import { closeModal } from "../../store/uiReducer";
 import csrfFetch from "../../store/csrf";
 
 import './AuthFormPage.css';
@@ -9,6 +10,7 @@ import './AuthFormPage.css';
 const AuthFormPage = () => {
     const dispatch = useDispatch();
     const sessionUser = useSelector(state => state.session.user);
+    const modal = useSelector(state => state.ui.modal);
     const history = useHistory();
 
     const [fname, setFname] = useState("");
@@ -31,6 +33,20 @@ const AuthFormPage = () => {
         }
         setErrors(errors);
     }, [email])
+
+    useEffect(() => {
+        const close = e => {
+            if (e.target === document.querySelector(".auth-form-modal-bg")) {
+                dispatch(closeModal());
+            }
+        }
+        if (modal) {
+            document.addEventListener('click', close);
+        }
+        return () => {
+            document.removeEventListener('click', close);
+        }
+    }, [modal])
 
     const handleEmail = async e => {
         e.preventDefault();
@@ -59,7 +75,6 @@ const AuthFormPage = () => {
             email,
             password
         }
-
         return dispatch(sessionActions.login(user))
             .catch(async response => {
                 let data;
@@ -80,7 +95,6 @@ const AuthFormPage = () => {
             email,
             password
         }
-
         return dispatch(sessionActions.signup(newUser))
             .catch(async response => {
                 let data;
@@ -95,11 +109,7 @@ const AuthFormPage = () => {
 
     const handleDemo = async e => {
         e.preventDefault();
-        const demo = {
-            email: 'demo_user@aa.io',
-            password: 'password'
-        }
-
+        const demo = { email: 'demo_user@aa.io', password: 'password' }
         return dispatch(sessionActions.login(demo))
             .catch(async response => {
                 let data;
@@ -114,15 +124,15 @@ const AuthFormPage = () => {
 
     const handleReturn = async e => {
         e.preventDefault();
-        await setLogin(false);
-        await setSignup(false);
-        await setFname("");
-        await setLname("");
-        await setEmail("");
-        await setPassword("");
-        await setHasSubmittedEmail(false);
-        await setErrors([]);
-        history.push("/")
+        setLogin(false);
+        setSignup(false);
+        setFname("");
+        setLname("");
+        setEmail("");
+        setPassword("");
+        setHasSubmittedEmail(false);
+        setErrors([]);
+        dispatch(closeModal())
     }
 
     const renderError = field => {

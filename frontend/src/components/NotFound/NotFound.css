@@ -1,0 +1,17 @@
+.not-found-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10vh;
+}
+
+h1 {
+    font-size: 32px;
+    font-family: inherit;
+}
+
+img.not-found {
+    margin: 10px;
+    width: 400px;
+}

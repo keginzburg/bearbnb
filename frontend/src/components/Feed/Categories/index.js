@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 import CategoryIndexItem from "./CategoryIndexItem";
 import FilterButton from "./FilterButton";
 
@@ -33,6 +35,20 @@ const Categories = () => {
         'Windmill': windmill,
         'Camper': camper
     };
+
+    useEffect(() => {
+        const categoryIndexScroll = e => {
+            if (window.scrollY === 0) {
+                document.querySelector(".cat-idx-container").classList.remove("cat-idx-scroll");
+            } else {
+                document.querySelector(".cat-idx-container").classList.add("cat-idx-scroll");
+            }
+        }
+
+        document.addEventListener("scroll", categoryIndexScroll)
+
+        return () => document.removeEventListener("scroll", categoryIndexScroll);
+    }, [])
 
     return (
         <div className="cat-container">

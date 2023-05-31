@@ -8,6 +8,7 @@ import ShowPhotos from './Show/ShowPhotos';
 import ShowDetails from './Show/ShowDetails';
 
 import './ListingsShow.css';
+import { Redirect } from 'react-router';
 
 const ListingsShow = () => {
     const { id } = useParams();
@@ -26,6 +27,7 @@ const ListingsShow = () => {
                 <ShowHeader listing={listing} />
                 <ShowPhotos listing={listing} />
                 <ShowDetails listing={listing} />
+                {/* <Reservation/> */}
             </div>
         </div>
     );

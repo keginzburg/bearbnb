@@ -1,3 +1,5 @@
+import Reservation from "../../Reservations";
+
 const ShowDetails = () => {
     return (
         <div className="show-details-container">
@@ -18,7 +20,7 @@ const ShowDetails = () => {
                     <i class="fa-solid fa-person"></i>
                 </div>
             </div>
-            <div></div>
+            <Reservation />
         </div>
     );
 };
