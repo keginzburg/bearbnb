@@ -7,4 +7,18 @@
     height: 80px;
     background-color: white;
     border-bottom: 1px solid rgba(211, 211, 211, 0.5);
+    position: fixed;
+    z-index: 101;
+}
+
+.unfixed {
+    position: relative;
+}
+
+.unfixed .logo-box {
+    margin-left: 11vw;
+}
+
+.unfixed .menu-box {
+    margin-right: 11vw;
 }

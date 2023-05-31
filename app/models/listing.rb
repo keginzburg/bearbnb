@@ -29,5 +29,5 @@ class Listing < ApplicationRecord
 
     validates :title, :description, :price, :latitude, :longitude, :street, :city, :state, :country, :zip_code, :property_type, :number_of_guests, :number_of_beds, :number_of_baths, presence: true
 
-
+    has_many_attached :photos
 end

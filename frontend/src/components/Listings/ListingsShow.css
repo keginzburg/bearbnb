@@ -1,0 +1,137 @@
+.listing-container {
+    padding-top: 0px;
+    width: 100vw;
+}
+
+.show-header-container {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 160px 0;
+}
+
+.show-header-title {
+    font-size:28px;
+    font-weight: 500;
+}
+
+.show-header-links {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 0;
+}
+
+.show-header-details {
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+}
+
+.show-header-details h2 {
+    display: flex;
+    /* align-items: center; */
+}
+
+.show-header-reviews, .show-header-location {
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: underline;
+}
+.show-header-reviews:hover, .show-header-location:hover {
+    cursor: pointer;
+}
+
+.star-icon {
+    margin-right: 5px;
+}
+
+.medal-icon {
+    font-size: 12px;
+    margin-top: 3px;
+    margin-right: 8px;
+}
+
+.div-dot {
+    /* display: flex;
+    width: fit-content;
+    height: fit-content;
+    align-items: center; */
+    margin: 4px 6px 0;
+    font-size: 8px;
+}
+
+.show-header-buttons {
+    display: flex;
+}
+
+.show-header-share {
+    margin-right: 5px;
+}
+
+.show-header-share, .show-header-save {
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    padding: 6px;
+}
+
+.show-header-share:hover,
+.show-header-save:hover {
+    cursor: pointer;
+    background-color: rgba(113, 113, 113, 0.1);
+}
+
+.show-header-share h2, .show-header-save h2 {
+    text-decoration: underline;
+    margin-left: 8px;
+}
+
+.show-photos-container {
+    display: flex;
+    padding: 0 160px;
+}
+
+.show-photos-main {
+    /* width: fit-content;
+    height: fit-content; */
+    margin-right: 8px;
+}
+
+.show-photos-main img {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 560px;
+    height: 413px;
+    object-fit: cover;
+}
+
+.show-photos-addl {
+    display: flex;
+    width: 560px;
+    height: 414px;
+    flex-wrap: wrap;
+}
+
+.show-photos-addl img.top {
+    width: 272px;
+    height: 206px;
+    object-fit: cover;
+}
+.show-photos-addl img.bottom {
+    width: 272px;
+    height: 199px;
+    object-fit: cover;
+}
+
+.show-photos-addl img.topright {
+    border-top-right-radius: 10px;
+    margin-left: 8px;
+    margin-bottom: 8px;
+}
+
+.show-photos-addl img.bottomright {
+    border-bottom-right-radius: 10px;
+    margin-left: 8px;
+}
