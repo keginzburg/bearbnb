@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import ProfileButton from "./ProfileButton";
 
 import "./Menu.css"
@@ -6,18 +7,18 @@ const Menu = () => {
     return (
         <div className="menu-box">
             <div className="menu">
-                <div className="host-box">
+                <Link className="host-box" to="/not-found">
                     <button>Become a Bear</button>
-                </div>
-                <div className="per-link-box">
+                </Link>
+                <a className="per-link-box" href="http://github.com/keginzburg" target="_blank">
                     <i className="fa-brands fa-github"></i>
-                </div>
-                <div className="per-link-box">
+                </a>
+                <a className="per-link-box" href="https://www.linkedin.com/in/kyleginzburg" target="_blank">
                     <i className="fa-brands fa-linkedin"></i>
-                </div>
-                <div className="per-link-box">
+                </a>
+                <a className="per-link-box" href="https://angel.co/u/kyle-ginzburg" target="_blank">
                     <i className="fa-brands fa-angellist"></i>
-                </div>
+                </a>
                 <ProfileButton />
             </div>
         </div>

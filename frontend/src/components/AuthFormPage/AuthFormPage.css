@@ -10,7 +10,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .auth-form-modal, .login-form-modal {
@@ -33,6 +32,10 @@
     font-size: 18px;
     padding: 3px 10px;
     border-radius: 50%;
+}
+
+i.fa-xmark, i.fa-chevron-left {
+    padding: 4px 0; 
 }
 
 .exit-icon:hover {
@@ -173,6 +176,7 @@
 
 .terms-conditions {
     font-size: 12px;
+    margin-bottom: 2px;
 }
 
 .terms-conditions span {

@@ -29,11 +29,11 @@
     align-items: center;
     color: gray;
     font-size: 26px;
-    border-radius: 30px;
     margin-left: 10px;
+    transition: 0.1s;
 }
 
 .per-link-box:hover {
-    background-color: rgba(211,211,211,0.35);
     cursor: pointer;
+    transform: scale(1.1);
 }

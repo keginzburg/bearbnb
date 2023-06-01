@@ -1,0 +1,36 @@
+.show-details-container {
+    padding: 0 160px;
+}
+
+.show-details-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 45vw;
+    margin-top: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+}
+
+
+.show-details-top-info > h3 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.top-info-gbbb {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+
+.show-details-host {
+    font-size: 30px;
+    border-radius: 50%;
+    background-color: rgb(255, 100, 100, 1);
+    /* margin-left: 20vw; */
+}
+
+i.fa-person {
+    padding: 10px 16px;
+}

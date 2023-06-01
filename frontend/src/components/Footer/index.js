@@ -9,7 +9,7 @@ const Footer = () => {
             <div className="div-dot">•</div>
             <a className="l-h6" href="https://www.linkedin.com/in/kyleginzburg" target="_blank">LinkedIn</a>
             <div className="div-dot">•</div>
-            <a className="l-h6" href="https://angel.co/u/kyle-ginzburg" target="_blank">AngelList</a>
+            <a className="l-h6" href="https://angel.co/u/kyle-ginzburg" target="_blank">Wellfound</a>
         </div>
     )
 }

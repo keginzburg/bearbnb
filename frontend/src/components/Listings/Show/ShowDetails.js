@@ -1,11 +1,13 @@
 import Reservation from "../../Reservations";
 
+import './ShowDetails.css';
+
 const ShowDetails = () => {
     return (
         <div className="show-details-container">
             <div className="show-details-top">
                 <div className="show-details-top-info">
-                    <h3>Entire cabin hosted by Caitlin</h3>
+                    <h3>Entire cabin hosted by HostName</h3>
                     <div className="top-info-gbbb">
                         <h4>4 guests</h4>
                         <div className="div-dot">•</div>

@@ -36,9 +36,9 @@ const ProfileButton = () => {
                         <SessionLinks />
                     </div>
                     <div className="addl-links">
-                        <a className="l-h4 personal" href="http://github.com/keginzburg">My GitHub</a>
-                        <a className="l-h4 personal" href="https://www.linkedin.com/in/kyleginzburg">My LinkedIn</a>
-                        <a className="l-h4 personal" href="https://angel.co/u/kyle-ginzburg">My AngelList</a>
+                        <a className="l-h4 personal" href="http://github.com/keginzburg" target="_blank">GitHub</a>
+                        <a className="l-h4 personal" href="https://www.linkedin.com/in/kyleginzburg" target="_blank">LinkedIn</a>
+                        <a className="l-h4 personal" href="https://angel.co/u/kyle-ginzburg" target="_blank">Wellfound</a>
                     </div> 
                 </div>
             )}

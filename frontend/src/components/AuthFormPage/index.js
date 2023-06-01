@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Redirect, useHistory } from "react-router-dom";
+import { Redirect } from "react-router-dom";
+
+import csrfFetch from "../../store/csrf";
 import * as sessionActions from "../../store/session";
 import { closeModal } from "../../store/uiReducer";
-import csrfFetch from "../../store/csrf";
 
 import './AuthFormPage.css';
 
@@ -11,7 +12,6 @@ const AuthFormPage = () => {
     const dispatch = useDispatch();
     const sessionUser = useSelector(state => state.session.user);
     const modal = useSelector(state => state.ui.modal);
-    const history = useHistory();
 
     const [fname, setFname] = useState("");
     const [lname, setLname] = useState("");
@@ -26,12 +26,14 @@ const AuthFormPage = () => {
         const errors = [];
         const regex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
-        if (email.length === 0) {
-            errors.push("Email is required.");
-        } else if (regex.test(email) === false) {
-            errors.push("Enter a valid email.");
+        if (!signup && !login) {
+            if (email.length === 0) {
+                errors.push("Email is required.");
+            } else if (regex.test(email) === false) {
+                errors.push("Enter a valid email.");
+            }
+            setErrors(errors);
         }
-        setErrors(errors);
     }, [email])
 
     useEffect(() => {
@@ -122,8 +124,7 @@ const AuthFormPage = () => {
             });
     }
 
-    const handleReturn = async e => {
-        e.preventDefault();
+    const handleReturn = async () => {
         setLogin(false);
         setSignup(false);
         setFname("");
@@ -197,7 +198,7 @@ const AuthFormPage = () => {
             </div>
         </div>
     )
-
+    // debugger
     if (signup) return (
         <div className="auth-form-modal-bg">
             <div className="login-form-modal" >
@@ -208,9 +209,9 @@ const AuthFormPage = () => {
                     <h1 className="auth-h1">Finish signing up</h1>
                 </div>
                 <form className="auth-form" onSubmit={handleSignup}>
-                    <input className={`${errors.length > 0 ? 'email-error' : null} fname`} type="text" id="fname" value={fname} onChange={e => setFname(e.target.value)} placeholder="First name"/>
+                    <input className={`${errors.some(error => error.includes("F")) ? 'email-error' : null} fname`} type="text" id="fname" value={fname} onChange={e => setFname(e.target.value)} placeholder="First name"/>
 
-                    <input className={`${errors.length > 0 ? 'email-error' : null} lname`} type="text" id="lname" value={lname} onChange={e => setLname(e.target.value)} placeholder="Last name" />
+                    <input className={`${errors.some(error => error.includes("F")) ? 'email-error' : null} lname`} type="text" id="lname" value={lname} onChange={e => setLname(e.target.value)} placeholder="Last name" />
                     {renderError('Name')}
 
                     <input className={`${errors.some(error => error.includes("Email")) ? 'email-error' : null}`} type="text" id="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="Email" />
