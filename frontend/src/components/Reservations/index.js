@@ -1,3 +1,5 @@
+import './Reservation.css';
+
 const Reservation = () => {
     return (
         <div className="reservation-cont">

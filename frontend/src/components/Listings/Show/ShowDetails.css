@@ -1,8 +1,9 @@
 .show-details-container {
     padding: 0 160px;
+    position: relative;
 }
 
-.show-details-top {
+.show-details-1 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -13,18 +14,18 @@
 }
 
 
-.show-details-top-info > h3 {
+.show-details-1-info > h3 {
     font-size: 22px;
     font-weight: 600;
 }
 
-.top-info-gbbb {
+.show-details-1-info-gbbb {
     display: flex;
     flex-direction: row;
     margin-top: 10px;
 }
 
-.show-details-host {
+.show-details-1-host {
     font-size: 30px;
     border-radius: 50%;
     background-color: rgb(255, 100, 100, 1);
@@ -33,4 +34,105 @@
 
 i.fa-person {
     padding: 10px 16px;
+}
+
+.show-details-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 45vw;
+    margin-top: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+}
+
+.show-details-2-info {
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+}
+
+.superbear-icon > img {
+    width: 32px;
+    height: 32px;
+}
+
+.show-details-2-amen {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.show-details-2-amen > h3 {
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.show-details-2-amen > h4 {
+    font-size: 15px;
+    font-weight: 200;
+    color: rgba(128, 128, 128, 1);
+    line-height: 20px;
+}
+
+.show-details-3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 45vw;
+    margin-top: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+}
+
+.show-details-3-info {
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+}
+
+.show-details-3-info > h3 {
+    font-weight: 200;
+    line-height: 20px;
+}
+
+.show-details-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 45vw;
+    margin-top: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+}
+
+.show-details-4-header {
+    margin-bottom: 20px;
+}
+
+.show-details-4-header > h3 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.show-details-4-info {
+    height: 180px;
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.show-details-4-amen {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.show-details-4-amen > img {
+    width: 32px;
+    height: auto;
+    margin-right: 16px;
+    margin-bottom: 10px;
 }

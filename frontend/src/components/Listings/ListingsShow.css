@@ -51,10 +51,6 @@
 }
 
 .div-dot {
-    /* display: flex;
-    width: fit-content;
-    height: fit-content;
-    align-items: center; */
     margin: 4px 6px 0;
     font-size: 8px;
 }

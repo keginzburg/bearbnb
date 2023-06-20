@@ -6,7 +6,7 @@ const ShowHeader = ({listing: {title, city, state, country}}) => {
                 <div className="show-header-details">
                     <h2 className="l-h2 show-header-rating">
                         <div className="star-icon">
-                            <i class="fa-solid fa-star"></i>
+                            <i className="fa-solid fa-star"></i>
                         </div>
                         4.72
                     </h2>
@@ -15,7 +15,7 @@ const ShowHeader = ({listing: {title, city, state, country}}) => {
                     <div className="div-dot">•</div>
                     <h2>
                         <div className="medal-icon">
-                            <i class="fa-solid fa-medal"></i>
+                            <i className="fa-solid fa-medal"></i>
                         </div>
                         Superbear
                     </h2>
